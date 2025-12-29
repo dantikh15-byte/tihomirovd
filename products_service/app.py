@@ -17,7 +17,7 @@ def get_products():
     return jsonify(products)
 
 @app.route('/products/<int:product_id>', methods=['GET'])
-def get_product(product_id):
+def get_product(product_id)
     """Получить товар по ID"""
     product = next((prod for prod in products if prod["id"] == product_id), None)
     return jsonify(product) if product else ('Not Found', 404)
